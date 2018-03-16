@@ -39,7 +39,7 @@ shopt -s histappend
 PROMPT_COMMAND='history -a'
 
 # Allow ctrl-S for history navigation (with ctrl-R)
-stty -ixon
+#stty -ixon
 
 # Ignore case on auto-completion
 # Note: bind used instead of sticking these in .inputrc
@@ -49,8 +49,8 @@ if [[ $iatest > 0 ]]; then bind "set completion-ignore-case on"; fi
 if [[ $iatest > 0 ]]; then bind "set show-all-if-ambiguous On"; fi
 
 # Set the default editor
-#export EDITOR=nano
-#export VISUAL=nano
+export EDITOR=nano
+export VISUAL=nano
 #alias pico='edit'
 #alias spico='sedit'
 #alias nano='edit'
@@ -93,35 +93,35 @@ export LESS_TERMCAP_us=$'\E[01;32m'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+#alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 # Edit this .bashrc file
-alias ebrc='edit ~/.bashrc'
+#alias ebrc='edit ~/.bashrc'
 
 # Show help for this .bashrc file
 alias hlp='less ~/.bashrc_help'
 
 # alias to show the date
-alias da='date "+%Y-%m-%d %A %T %Z"'
+#alias da='date "+%Y-%m-%d %A %T %Z"'
 
 # Alias's to modified commands
-alias cp='cp -i'
-alias mv='mv -i'
-alias rm='rm -iv'
-alias mkdir='mkdir -p'
-alias ps='ps auxf'
-alias ping='ping -c 10'
-alias less='less -R'
+#alias cp='cp -i'
+#alias mv='mv -i'
+#alias rm='rm -iv'
+#alias mkdir='mkdir -p'
+#alias ps='ps auxf'
+#alias ping='ping -c 10'
+#alias less='less -R'
 alias cls='clear'
-alias apt-get='sudo apt-get'
-alias multitail='multitail --no-repeat -c'
-alias freshclam='sudo freshclam'
-alias vi='vim'
-alias svi='sudo vi'
-alias vis='vim "+set si"'
+#alias apt-get='sudo apt-get'
+#alias multitail='multitail --no-repeat -c'
+#alias freshclam='sudo freshclam'
+#alias vi='vim'
+#alias svi='sudo vi'
+#alias vis='vim "+set si"'
 
 # Change directory aliases
-alias home='cd ~'
+#alias home='cd ~'
 alias cd..='cd ..'
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -132,7 +132,7 @@ alias .....='cd ../../../..'
 alias bd='cd "$OLDPWD"'
 
 # Remove a directory and all files
-alias rmd='/bin/rm  --recursive --force --verbose '
+#alias rmd='/bin/rm  --recursive --force --verbose '
 
 # Alias's for multiple directory listing commands
 alias la='ls -Alh' # show hidden files
